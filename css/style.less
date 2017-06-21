@@ -1,0 +1,180 @@
+@import url(m_style.css);
+.full(@w, @h, @c) {
+    width: @w;
+    height: @h;
+    background: @c;
+}
+html,
+body,
+.container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.box(@dir:horizontal) {
+    display: -webkit-box;
+    -webkit-box-orient: @dir;
+}
+.container {
+    .box(vertical);
+    header {
+        .box;
+        .full(100%,1.32rem,#1a1a1a);
+        span {
+            -webkit-box-flex: 1;
+            display: block;
+            margin-top: 0.29rem;
+            margin-left: 0.28rem;
+            img {
+                .full(2.18rem,auto,none);
+            }
+        }
+        a {
+            display: block;
+            margin-right: 0.32rem;
+            img {
+                margin-top: 0.36rem;
+                .full(0.61rem,auto,none);
+            }
+        }
+    }
+    section {
+        -webkit-box-flex: 1;
+        background: #ebebeb;
+        overflow: auto;
+        .search {
+            background: #fff;
+            height: 0.94rem;
+            margin: 0.19rem 0.29rem;
+            .box;
+            border-radius: 0.4rem;
+            overflow: hidden;
+            border: 1px solid #759f6f;
+            input {
+                height: 0.94rem;
+                display: block;
+                -webkit-box-flex: 1;
+                border: 0;
+                outline: none;
+                text-align: center; //               border: 1px solid #759f6f;
+            }
+            .right {
+                .full(1.79rem,0.94rem,none);
+                background: #0cc009 url("../img/QQ图片20170309102539_03.png") no-repeat center;
+                background-size: 0.50rem;
+            }
+        }
+        .nav {
+            .box;
+            .full(100%,1.18rem,#f5f5f5);
+            border-bottom: 1px solid #CCCCCC;
+            a {
+                display: block;
+                -webkit-box-flex: 1;
+                width: 1.95rem;
+                line-height: 1.18rem;
+                text-align: center;
+                &:first-child {
+                    color: #1fb820;
+                    border-bottom: 1px solid #1fb820;
+                }
+            }
+            dl {
+                margin-right: 0.34rem;
+                dt {
+                    img {
+                        .full(0.5rem,auto,none);
+                        margin-left: 0.16rem;
+                    }
+                }
+                dd {
+                    font-size: 0.26rem;
+                }
+            }
+        }
+        .tu {
+            .full(100%,6.47rem,#fff);
+            span {
+                display: block;
+                img {
+                    .full(11.94rem,auto,none);
+                    margin: 0.22rem;
+                }
+            }
+        }
+        .heng {
+            .full(100%,1.6rem,#fff);
+            .box;
+            margin-top: 0.2rem;
+            span {
+                img {
+                    .full(0.64rem,auto,none);
+                    margin-top: 0.5rem;
+                    margin-left: 0.35rem;
+                    margin-right: 0.19rem;
+                }
+            }
+            h3 {
+                line-height: 1.6rem;
+                -webkit-box-flex: 1;
+            }
+            a {
+                line-height: 1.6rem;
+                color: #CCCCCC;
+            }
+        }
+        .zi{
+            .full(100%,2.5rem,#fff);
+            span{
+                display: block;
+                line-height: 0.8rem;
+                img{
+                  .full(0.39rem,auto,none);  
+                  margin-left: 0.38rem;
+                  margin-right: 0.3rem; 
+                }
+            } 
+        }
+        .main{
+            .box;
+            dl{
+                -webkit-box-flex: 1;
+                margin-left: 0.22rem;
+                margin-top: 0.22rem;
+                
+               dt{
+                   img{
+                  .full(5.81rem,auto,none);  
+                       
+                   }
+               }
+               dd{
+                   a{
+                       color: #CCCCCC;
+                   }
+               } 
+            }
+        }
+    }
+    footer {
+        .full(100%,1.43rem,none);
+        border-top: 1px solid #cccccc;
+        .box;
+        dl {
+            -webkit-box-flex: 1;
+            text-align: center;
+            margin-top: 0.14rem;
+            &:first-child {
+                color: #10be07;
+            }
+            dd {
+                margin-top: 0.10rem;
+            }
+            dt {
+                img {
+                    .full(0.75rem,auto,none);
+                }
+            }
+        }
+    }
+}
